@@ -3,9 +3,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-
+app.use(express.json())
 mongoose
-    .connect("mongodb://localhost:27017/movie-db")
+    .connect("mongodb://localhost:27017/suggestion-box")
     .then(()=>{
         app.listen(port, ()=>{
             console.log(`Server Started on port ${port}`)
